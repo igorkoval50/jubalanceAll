@@ -1,0 +1,24 @@
+{% block block_image_brands %}
+    {% set columns = 2 %}
+    {% set id = element.id %}
+
+    {% block block_image_text_left %}
+        <div class="col-sm-12">
+        <div class="wrapper-container-brands">
+            <!-- Swiper -->
+            <div class="swiper-container swiper-container-brands-element">
+                <div class="swiper-wrapper">
+                    {% for brand in page.footer.extensions.allco_brands.all() %}
+                        {% if brand.mediaUrl %}
+                            <div class="swiper-slide">
+                                <img src="{{ brand.mediaUrl }}" alt="image">
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        </div>
+    {% endblock %}
+
+{% endblock %}

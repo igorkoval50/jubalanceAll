@@ -1,0 +1,36 @@
+{
+    "name": "allco/brand-slider",
+    "description": "Brand Slider",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Allco",
+            "role": "Manufacturer"
+        }
+    ],
+    "require": {
+        "shopware/core": "^6.2",
+        "shopware/storefront": "^6.2",
+        "shopware/administration": "^6.2"
+    },
+    "extra": {
+        "shopware-plugin-class": "Allco\\BrandSlider\\AllcoBrandSlider",
+        "plugin-icon": "src/Resources/public/plugin.png",
+        "copyright": "(c) Allco",
+        "label": {
+            "de-DE": "Brand Slider",
+            "en-GB": "Brand Slider"
+        },
+        "description": {
+            "de-DE": "Brand Slider",
+            "en-GB": "Brand Slider"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Allco\\BrandSlider\\": "src/"
+        }
+    }
+}

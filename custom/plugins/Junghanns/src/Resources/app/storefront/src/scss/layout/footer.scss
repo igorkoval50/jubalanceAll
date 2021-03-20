@@ -1,0 +1,169 @@
+.footer-main {
+  margin-top: 80px;
+  padding-top: 76px;
+  background-color: $green;
+  .social-links {
+    display: flex;
+    margin-bottom: 6px;
+    margin-left: 9px;
+  }
+  .social-link {
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    margin-right: 12px;
+  }
+  a {
+    &:hover {
+      color: $white;
+      opacity: .8;
+    }
+  }
+  *, a {
+    color: $white;
+  }
+  .container {
+    max-width: 1240px;
+  }
+  .footer-bottom {
+    margin-top: 55px;
+    padding-top: 22px;
+    border-top: 1px solid #fff;
+    padding-left: 0;
+    padding-right: 0;
+    .bottom-text:first-child {
+      padding-left: 0;
+    }
+    .bottom-text:last-child {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0;
+    }
+    p, a {
+      font-size: 15px;
+    }
+  }
+  .footer-column-first {
+    padding-top: 35px;
+  }
+  .footer-link-item {
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .footer-column-first, .footer-column-second {
+    .footer-column:last-child {
+      .footer-link-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .footer-logotype {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+  .hotline-content {
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+    p {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+    a {
+      font-weight: 600;
+    }
+  }
+  .footer-column-second {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .phone {
+    position: relative;
+    padding-left: 25px;
+    margin-top: 5px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(../assets/icon/call.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      @media (max-width: 575px) {
+        width: 13px;
+        height: 13px;
+        top: 8px;
+      }
+    }
+  }
+  @media(max-width:1250px) {
+    .footer-bottom {
+      max-width: 99%;
+      margin: 20px auto 0;
+    }
+  }
+  @media(max-width:991px) {
+    .footer-column-first {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .hotline-content {
+      padding-left: 20px;
+    }
+  }
+  @media(max-width:575px) {
+    padding-top: 50px;
+    .content-first {
+      margin-bottom: 20px;
+    }
+    a {
+      font-size: 12px;
+    }
+    .footer-link-item {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .footer-column-first {
+      padding-top: 10px;
+    }
+    .social-links {
+      margin-top: 30px;
+    }
+    .footer-column-first, .footer-column-second {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .hotline-content {
+      padding-bottom: 20px;
+      padding-top: 20px;
+      p {
+        font-size: 12px;
+      }
+    }
+    .footer-bottom {
+      p {
+        font-size: 12px;
+      }
+      .bottom-text:last-child {
+        justify-content: flex-start;
+        padding-left: 0;
+      }
+    }
+  }
+}

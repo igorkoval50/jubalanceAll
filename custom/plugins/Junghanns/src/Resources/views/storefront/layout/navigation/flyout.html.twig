@@ -1,0 +1,54 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/flyout.html.twig' %}
+{% block layout_navigation_flyout %}
+    {% set category = navigationTree.category %}
+    {% set name = category.translated.name %}
+    {% block layout_navigation_flyout_bar %}
+        <div class="row navigation-flyout-bar">
+            {% block layout_navigation_flyout_bar_category %}
+                <div class="col">
+                    <div class="navigation-flyout-category-link">
+                        {% block layout_navigation_flyout_bar_category_link %}
+                            {% if category.type == 'page' %}
+                                <a class="nav-link"
+                                   href="{{ seoUrl('frontend.navigation.page', { navigationId: category.id }) }}"
+                                   itemprop="url"
+                                   title="{{ name }}">
+                                    {% block layout_navigation_flyout_bar_category_link_text %}
+                                        {{ "general.toCategory"|trans|sw_sanitize }} {{ name }}
+                                        {% sw_icon 'arrow-right' style {
+                                            'color': 'primary',
+                                            'pack':'solid'
+                                        } %}
+                                    {% endblock %}
+                                </a>
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                </div>
+            {% endblock %}
+
+            {% block layout_navigation_flyout_bar_close %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+    {% block layout_navigation_flyout_content %}
+        <div class="row navigation-flyout-content">
+            {% block layout_navigation_flyout_categories %}
+                <div class="{% if category.media %}col-12 {% else %}col-12{% endif %}">
+                    <div class="navigation-flyout-categories">
+                        {% block layout_navigation_flyout_categories_recoursion %}
+                            {% sw_include '@Storefront/storefront/layout/navigation/categories.html.twig' with {
+                                navigationTree: navigationTree.children,
+                                navigationMedia: category.media
+                            } only %}
+                        {% endblock %}
+                    </div>
+                </div>
+            {% endblock %}
+
+            {% block layout_navigation_flyout_teaser %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}

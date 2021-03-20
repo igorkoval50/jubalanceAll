@@ -1,0 +1,11 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-form.html.twig' %}
+ {% block element_form_contact_form_title %}
+     <div class="card-title d-flex justify-content-between">
+         {% if element.config.title.value %}
+             <span>{{ element.config.title.value }}</span>
+             <span class="required-info">{{ 'form.required'|trans }}</span>
+         {%  else %}
+             {{ "contact.headline"|trans }}
+         {% endif %}
+     </div>
+ {% endblock %}

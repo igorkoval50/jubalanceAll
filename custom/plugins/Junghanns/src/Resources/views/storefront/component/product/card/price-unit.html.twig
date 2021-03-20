@@ -1,0 +1,23 @@
+{% sw_extends '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
+
+    {% block component_product_box_block_list_price_wrapper %}
+        {% set cheapestPrice = product.calculatedPrices|first %}
+         {% for calcPrice in product.calculatedPrices %}
+             {% if cheapestPrice.unitPrice > calcPrice.unitPrice %}
+                 {% set cheapestPrice = calcPrice %}
+             {% endif %}
+         {% endfor %}
+
+        {% for priceElement in product.price.elements %}
+            {% if priceElement.gross %}
+                <span class="{% if priceElement.listPrice.gross %}low-price {% else %} product-price{% endif %}"> {{ priceElement.gross|currency }}</span>
+            {% endif %}
+
+            {% if priceElement.listPrice.gross %}
+                <span class="product-price">
+             {{ priceElement.listPrice.gross|currency }}
+        </span>
+            {% endif %}
+
+        {% endfor %}
+ {% endblock %}

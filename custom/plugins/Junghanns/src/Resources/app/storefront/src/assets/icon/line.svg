@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="1270" viewBox="0 0 10 1270">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="10" height="1270" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-955 -821)">
+      <path id="Rechteck_16" data-name="Rechteck 16" d="M0,0H2V1270H0Z" transform="translate(959 821)" fill="#8cbf44"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="5" cy="5" r="5" transform="translate(955 821)" fill="#8cbf44"/>
+      <circle id="Ellipse_3_Kopie" data-name="Ellipse 3 Kopie" cx="5" cy="5" r="5" transform="translate(955 1124)" fill="#8cbf44"/>
+      <circle id="Ellipse_3_Kopie_2" data-name="Ellipse 3 Kopie 2" cx="5" cy="5" r="5" transform="translate(955 1345)" fill="#8cbf44"/>
+      <circle id="Ellipse_3_Kopie_3" data-name="Ellipse 3 Kopie 3" cx="5" cy="5" r="5" transform="translate(955 1517)" fill="#8cbf44"/>
+      <circle id="Ellipse_3_Kopie_4" data-name="Ellipse 3 Kopie 4" cx="5" cy="5" r="5" transform="translate(955 1762)" fill="#8cbf44"/>
+    </g>
+  </g>
+</svg>

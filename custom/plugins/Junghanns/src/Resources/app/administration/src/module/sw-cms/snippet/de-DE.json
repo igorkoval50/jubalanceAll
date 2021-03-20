@@ -1,0 +1,27 @@
+{
+    "sw-cms": {
+        "blocks": {
+            "imageText": {
+                "brands": {
+                    "label": "brands image slider"
+                },
+                "fourImages": {
+                    "label": "four images and texts"
+                },
+                "imageTextInside": {
+                    "label": "two images and text"
+                }
+            },
+            "text": {
+                "textFourColumn": {
+                    "label": "four text element column"
+                }
+            },
+            "commerce": {
+                "productFourColumn": {
+                    "label": "four product column"
+                }
+            }
+        }
+    }
+}

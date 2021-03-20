@@ -1,0 +1,80 @@
+{% block block_image_text_row %}
+    {% set columns = 4 %}
+    {% set id = element.id %}
+
+    {% block block_image_text_row_left %}
+        <div class="col-sm-6 col-lg-3 image-text-wrapper">
+            {% block block_image_text_row_left_image %}
+                {% set element = block.slots.getSlot('left-image') %}
+                <div data-cms-element-id="{{ id }}">
+                    <a href="{{ element.config.url.value }}">
+                        {% set sportsMediaId = element.config.media.value %}
+                        {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+                        {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+                        <img src="{{ sportsMedia.url }}" alt="image">
+                        {% set element = block.slots.getSlot('left-text') %}
+                        {{ element.config.content.value|raw }}
+                    </a>
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+    {% block block_image_text_row_center %}
+        <div class="col-sm-6 col-lg-3 image-text-wrapper">
+            {% block block_image_text_row_center_image %}
+                {% set element = block.slots.getSlot('center-image') %}
+                <div data-cms-element-id="{{ id }}">
+                    <a href="{{ element.config.url.value }}">
+                        {% set sportsMediaId = element.config.media.value %}
+                        {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+                        {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+                        <img src="{{ sportsMedia.url }}" alt="image">
+                        {% set element = block.slots.getSlot('center-text') %}
+                        {{ element.config.content.value|raw }}
+                    </a>
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+    {% block block_image_text_row_right %}
+        <div class="col-sm-6 col-lg-3 image-text-wrapper">
+            {% block block_image_text_row_right_image %}
+                {% set element = block.slots.getSlot('right-image') %}
+                <div data-cms-element-id="{{ id }}">
+                    <a href="{{ element.config.url.value }}">
+                        {% set sportsMediaId = element.config.media.value %}
+                        {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+                        {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+                        <img src="{{ sportsMedia.url }}" alt="image">
+                        {% set element = block.slots.getSlot('right-text') %}
+                        {{ element.config.content.value|raw }}
+                    </a>
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+    {% block block_image_text_row_right_top %}
+        <div class="col-sm-6 col-lg-3 image-text-wrapper">
+            {% block block_image_text_row_right_top_image %}
+                {% set element = block.slots.getSlot('right-top-image') %}
+                <div data-cms-element-id="{{ id }}">
+                    <a href="{{ element.config.url.value }}">
+                        {% set sportsMediaId = element.config.media.value %}
+                        {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+                        {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+                        <img src="{{ sportsMedia.url }}" alt="image">
+                        {% set element = block.slots.getSlot('right-top-text') %}
+                        {{ element.config.content.value|raw }}
+                    </a>
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}

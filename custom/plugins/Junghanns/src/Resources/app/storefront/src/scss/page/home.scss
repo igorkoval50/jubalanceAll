@@ -1,0 +1,198 @@
+.is-act-home {
+  .breadcrumb {
+    display: none;
+  }
+  .container-main {
+    padding-top: 0;
+  }
+  .cms-section.pos-0 {
+    padding: 0 40px;
+    @media (max-width: 1300px) {
+      padding: 0;
+    }
+    .cms-element-text {
+      position: relative;
+      min-height: 768px;
+      @media (max-width: 1300px) {
+        min-height: 600px;
+      }
+      @media (max-width: 768px) {
+        min-height: 500px;
+      }
+      @media (max-width: 480px) {
+        min-height: 320px;
+      }
+      .banner-home-text {
+        position: absolute;
+        top: 47%;
+        transform: translate(-27%, -47%);
+        left: 27%;
+        @media (max-width: 480px) {
+          transform: translate(0, -47%);
+          left: 20px;
+          width: 100%;
+        }
+        h1 {
+          font-size: 81px;
+          color: #fff;
+          line-height: 70px;
+          margin-bottom: 30px;
+          @media (max-width: 1300px) {
+            font-size: 70px;
+          }
+          @media (max-width: 700px) {
+            font-size: 31px;
+            color: #fff;
+            line-height: 40px;
+            margin-bottom: 30px;
+          }
+          @media (max-width: 480px) {
+            margin-bottom: 10px;
+          }
+        }
+        p {
+          color: #fff;
+          @media (max-width: 480px) {
+            margin-bottom: 10px;
+          }
+        }
+        .btn-white {
+          margin-top: 30px;
+          @media (max-width: 480px) {
+            margin-top: 20px;
+          }
+        }
+        .arrow-button {
+          position: absolute;
+          bottom: -168px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .cms-section.pos-1 {
+    border-bottom: 6px solid $green;
+  }
+  .cms-section.pos-3 {
+    padding-top: 120px;
+    @media (max-width: 768px) {
+      padding-top: 70px;
+    }
+    .pos-0 {
+      margin-bottom: 30px;
+      text-align: center;
+      @media (max-width: 767px) {
+        margin-bottom: 0;
+      }
+      h2 {
+        line-height: 62px;
+        margin-bottom: 0;
+        color: $green;
+      }
+    }
+    .pos-3 {
+      max-width: 1003px;
+      margin: 25px auto 0;
+    }
+  }
+  .cms-section.pos-4 {
+    padding: 120px 0;
+    @media (max-width: 768px) {
+      padding: 70px 0;
+    }
+    .cms-block-text-on-image {
+      height: 600px;
+      margin: 0 40px;
+      border-radius: 20px;
+      @media (max-width: 768px) {
+        margin: 0;
+        height: 450px;
+        border-radius: 0;
+      }
+      .col-md-6:first-child  {
+        padding-right: 0;
+      }
+      h2 {
+        margin-bottom: 35px;
+        color: $white;
+        text-align: center;
+      }
+      p {
+        color: $white;
+        margin-bottom: 35px;
+      }
+      a {
+        margin: 0 auto;
+      }
+      .cms-block-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        max-width: 1030px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .cms-section.pos-5 {
+    img {
+      height: 629px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      @media (max-width: 1024px) {
+        height: 500px;
+      }
+      @media (max-width: 768px) {
+        height: 400px;
+      }
+      @media (max-width: 767px) {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+    .cms-element-text {
+      height: 100%;
+      width: 460px;
+      margin-top: 56px;
+      margin-left: 11%;
+      @media (max-width: 1024px) {
+        margin-left: 0;
+      }
+      @media (max-width: 768px) {
+        margin-top: 0;
+      }
+      @media (max-width: 767px) {
+        padding: 0 20px;
+        width: 100%;
+      }
+      h2 {
+        color: $green;
+        margin-bottom: 35px;
+      }
+      a {
+        margin-top: 25px;
+      }
+    }
+  }
+  .cms-section.pos-7 {
+    padding-top: 120px;
+    @media (max-width: 769px) {
+      padding-top: 70px;
+    }
+    .cms-element-text {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .cms-section.pos-8 {
+   padding-top: 0;
+    .btn-green {
+      margin: 24px auto 0;
+      font-size: 12px;
+    }
+    .cms-element-text {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

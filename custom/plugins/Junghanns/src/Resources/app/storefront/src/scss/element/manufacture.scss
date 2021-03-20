@@ -1,0 +1,14 @@
+.cms-block-image-brands {
+  max-width: 1024px;
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+    height: 128px;
+  }
+  @media (max-width: 991px) {
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

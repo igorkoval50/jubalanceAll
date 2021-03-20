@@ -1,0 +1,15 @@
+.sw-cms-block-image-text-brands {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    .btn-primary {
+        display: inline-block;
+        margin-top: 20px;
+    }
+    img {
+        max-width: 100%;
+    }
+    h2 {
+        text-align: center;
+    }
+}

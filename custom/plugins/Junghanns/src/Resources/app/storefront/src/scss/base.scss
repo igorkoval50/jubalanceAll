@@ -1,0 +1,24 @@
+@import "vendor/swiper";
+@import "abstracts/color";
+@import "abstracts/fonts";
+@import "abstracts/mixins";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "element/manufacture";
+@import "element/product";
+@import "element/product-slider";
+@import "element/four-images";
+@import "element/four-product";
+@import "element/form";
+@import "element/four-text";
+
+
+@import "page/home";
+@import "page/detail";
+@import "page/shop";
+@import "page/general";
+@import "page/history";
+@import "page/career";
+@import "page/contact";

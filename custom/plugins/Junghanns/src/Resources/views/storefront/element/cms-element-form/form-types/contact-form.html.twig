@@ -1,0 +1,151 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-form/form-types/contact-form.html.twig' %}
+{% block cms_form_contact %}
+    <form action="{{ path(action) }}"
+          method="post"
+          data-form-csrf-handler="true"
+          data-form-validation="true">
+
+        <div class="form-content">
+        <div class="form-row">
+            {% block cms_form_contact_select_salutation %}
+                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-select-salutation.html.twig'
+                    with {
+                    additionalClass: 'd-none',
+                    required: false,
+                }
+                %}
+            {% endblock %}
+
+            {% block cms_form_contact_input_first_name %}
+                {% set firstNameFieldRequired = shopware.config.core.basicInformation.firstNameFieldRequired == true %}
+                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                    with {
+                    fieldName: 'firstName',
+                    required: firstNameFieldRequired,
+                    additionalClass: 'col-md-6 first-name',
+                    label: 'account.personalFirstNameLabel',
+                    placeholder: 'account.personalFirstNamePlaceholder'
+                }
+                %}
+            {% endblock %}
+
+            {% block cms_form_contact_input_last_name %}
+                {% set lastNameFieldRequired = shopware.config.core.basicInformation.lastNameFieldRequired == true %}
+                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                    with {
+                    fieldName: 'lastName',
+                    required: lastNameFieldRequired,
+                    additionalClass: 'col-md-6',
+                    label: 'account.personalLastNameLabel',
+                    placeholder: 'account.personalLastNamePlaceholder'
+                }
+                %}
+            {% endblock %}
+        </div>
+
+        <div class="form-row">
+            {% block cms_form_contact_input_email %}
+                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                    with {
+                    fieldName: 'email',
+                    type: 'email',
+                    required: true,
+                    additionalClass: 'col-md-6 email-form',
+                    label: 'account.loginMailLabel',
+                    placeholder: 'account.loginMailPlaceholder'
+                }
+                %}
+            {% endblock %}
+
+            {% block cms_form_contact_input_phone %}
+                {% set phoneNumberFieldRequired = shopware.config.core.basicInformation.phoneNumberFieldRequired == true %}
+                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                    with {
+                    fieldName: 'phone',
+                    required: false,
+                    additionalClass: 'col-md-6',
+                    label: 'account.personalPhoneLabel',
+                    placeholder: 'account.personalPhonePlaceholder'
+                }
+                %}
+            {% endblock %}
+        </div>
+
+        <div class="form-row">
+            {% block cms_form_contact_input_subject %}
+                {% block cms_element_form_input %}
+                    {% set fieldName = 'subject' %}
+                    {% set additionalClass = 'd-none' %}
+                    {% set required = false %}
+                    <div class="form-group {{ additionalClass }}">
+                        {% block cms_element_form_input_label %}
+                            <label class="form-label" for="form-{{ fieldName }}">
+                                {{- label|trans -}}{% if required %} {{- "general.required"|trans -}}{% endif %}
+                            </label>
+                        {% endblock %}
+
+                        {% block cms_element_form_input_input %}
+                            <input name="{{ fieldName }}"
+                                   {% if type %}type="{{ type }}"{% endif %}
+                                   id="form-{{ fieldName }}"
+                                   value=" "
+                                   placeholder="{{ placeholder|trans }}"
+                                    {% if required %}required="required"{% endif %}
+                                   class="form-control{% if formViolations.getViolations( '/' ~ fieldName ) %} is-invalid{% endif %}"/>
+
+                            {% if formViolations.getViolations( '/' ~ fieldName ) is not empty %}
+                                {% sw_include '@Storefront/storefront/utilities/form-violation.html.twig' with {
+                                    violationPath: ('/' ~ fieldName)
+                                } %}
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            {% endblock %}
+        </div>
+
+        <div class="form-row">
+            {% block cms_form_contact_comment_textarea %}
+                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-textarea.html.twig'
+                    with {
+                    rows: 5,
+                    required: false,
+                    fieldName: 'comment',
+                    additionalClass: 'col-12',
+                    label: 'contact.commentLabel',
+                    placeholder: 'contact.commentPlaceholder'
+                }
+                %}
+            {% endblock %}
+        </div>
+
+        {% block cms_form_contact_required_fields_info %}
+            {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-info-required.html.twig' %}
+        {% endblock %}
+
+        {% block cms_form_contact_captcha %}
+            {% sw_include '@Storefront/storefront/component/captcha/base.html.twig' with { 'captchas': shopware.config.core.basicInformation.activeCaptchas } %}
+        {% endblock %}
+
+        {% block cms_form_contact_privacy %}
+            {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-privacy.html.twig' %}
+        {% endblock %}
+
+        {% block cms_form_contact_submit %}
+            {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-submit.html.twig' %}
+        {% endblock %}
+        </div>
+
+        {% block cms_form_contact_hidden_fields %}
+            <div class="form-hidden-fields">
+                {% block cms_form_contact_csrf %}
+                    {{ sw_csrf(action) }}
+                {% endblock %}
+
+                <input type="hidden" name="slotId" value="{{ element.id }}"/>
+
+                <input type="submit" class="submit--hidden d-none" />
+            </div>
+        {% endblock %}
+    </form>
+{% endblock %}

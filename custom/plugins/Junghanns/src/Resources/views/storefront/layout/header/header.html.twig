@@ -1,0 +1,42 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+{% block layout_header_logo %}
+    <div class="col-1 d-block d-lg-none">
+        <div class="col-sm-auto d-none d-sm-block d-lg-none">
+            {% block layout_header_navigation_toggle_tablet %}
+                <div class="nav-main-toggle">
+                    {% block layout_header_navigation_toggle_tablet_button %}
+                        <button class="btn nav-main-toggle-btn header-actions-btn"
+                                type="button"
+                                data-offcanvas-menu="true"
+                                aria-label="{{ "general.menuLink"|trans|striptags }}">
+                            {% block layout_header_navigation_toggle_tablet_button_icon %}
+                                {% sw_icon 'stack' %}
+                            {% endblock %}
+                        </button>
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="col-3 col-lg-auto header-logo-col">
+        {% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
+    </div>
+
+    <div class="nav-main d-none d-lg-block col-lg-7">
+        {% block base_navigation_inner %}
+            {% sw_include '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+
+ {% block layout_header_search %}
+     <div class="col-5 order-2 col-sm order-sm-1 header-search-col">
+         <div class="row">
+             <div class="col">
+                 {% sw_include '@Storefront/storefront/layout/header/search.html.twig' %}
+             </div>
+         </div>
+     </div>
+ {% endblock %}

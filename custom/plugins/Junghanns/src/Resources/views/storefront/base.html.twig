@@ -1,0 +1,27 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+
+  {% block base_header %}
+      <header class="header-main">
+          {% block base_header_inner %}
+              <div class="container">
+                  {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
+              </div>
+          {% endblock %}
+      </header>
+  {% endblock %}
+   {% block base_navigation %}
+   {% endblock %}
+
+{% block base_script_hmr_mode %}
+    <template data-swag-allco-swiper-slider></template>
+    {{ parent() }}
+{% endblock %}
+
+
+{% block base_body_classes %}
+    {{ parent() }}
+    {% if page.header.navigation.active.translated.customFields.custom_category_class %}
+        is-act-{{ page.header.navigation.active.translated.customFields.custom_category_class }}
+    {% endif %}
+{% endblock %}

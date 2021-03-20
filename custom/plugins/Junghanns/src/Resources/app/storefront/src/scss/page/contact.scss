@@ -1,0 +1,81 @@
+.is-act-contact {
+  .breadcrumb {
+    display: none;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 47px;
+    color: $green;
+    @media (max-width: 575px) {
+      font-size: 30px;
+    }
+    @media (max-width: 767px) {
+      font-size: 24px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  p, span, div {
+    font-size: 16px;
+    @media (max-width: 575px) {
+      font-size: 12px;
+    }
+  }
+
+  .container-main {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .cms-section.pos-0 {
+    margin-bottom: 100px;
+    @media (max-width: 1024px) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 20px;
+    }
+
+    .cms-image {
+      padding: 0 40px;
+      height: 505px;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width: 1024px) {
+        padding: 0;
+      }
+      @media (max-width: 480px) {
+        height: 220px;
+      }
+    }
+  }
+
+  .footer-main {
+    margin-top: 0;
+  }
+  .cms-section.pos-3 {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    z-index: 10;
+    top: -122px;
+    @media (max-width: 767px) {
+      top: 0;
+    }
+    .map {
+      border-radius: 20px;
+      overflow: hidden;
+      @media (max-width: 767px) {
+        border-radius: 0;
+      }
+    }
+    h2 {
+      display: none;
+    }
+  }
+}

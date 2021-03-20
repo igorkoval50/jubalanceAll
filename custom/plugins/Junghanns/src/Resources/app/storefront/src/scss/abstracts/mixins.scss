@@ -1,0 +1,68 @@
+@mixin btn {
+  font-size: 15px;
+  width: 158px;
+  height: 33px;
+  border: 2px solid $grey;
+  color: $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin before-slider {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 11px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../assets/icon/arrow-left.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn-grey {
+  @include btn;
+}
+
+.btn-green {
+  @include btn;
+  border-color: $green;
+  color: $green;
+  &:hover {
+    border-color: $green;
+    color: $green;
+    opacity: .8;
+  }
+}
+
+.btn-white {
+  @include btn;
+  border-color: $white;
+  color: $white;
+  width: 138px;
+  height: 33px;
+  &:hover {
+    color: $white;
+    opacity: .8;
+  }
+}
+
+
+.btn-grey {
+  @include btn;
+  border-color: $grey;
+  color: $grey;
+  width: 158px;
+  height: 33px;
+  &:hover {
+    color: $grey;
+    opacity: .8;
+  }
+}
