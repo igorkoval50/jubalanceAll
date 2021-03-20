@@ -1,0 +1,84 @@
+.is-act-team {
+  .breadcrumb {
+    display: none;
+  }
+
+  h2 {
+    font-size: 47px;
+    color: $green;
+    @media (max-width: 575px) {
+      font-size: 30px;
+    }
+    @media (max-width: 767px) {
+      font-size: 24px;
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  p, span, div {
+    font-size: 16px;
+    @media (max-width: 575px) {
+      font-size: 12px;
+    }
+  }
+
+  .container-main {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .cms-section.pos-0 {
+    margin-bottom: 120px;
+    @media (max-width: 1024px) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 20px;
+    }
+
+    .cms-image {
+      padding: 0 40px;
+      height: 505px;
+      width: 100%;
+      object-fit: cover;
+      object-position: 0 -60px;
+      @media (max-width: 1024px) {
+        padding: 0;
+      }
+      @media (max-width: 480px) {
+        height: 220px;
+      }
+    }
+  }
+
+  .footer-main {
+    margin-top: 0;
+  }
+  .cms-section.pos-1 {
+    padding-bottom: 80px;
+    h2 {
+      text-align: center;
+    }
+    @media (max-width: 767px) {
+      padding-bottom: 20px;
+    }
+    .pos-0 {
+      margin-bottom: 30px;
+      text-align: center;
+      @media (max-width: 767px) {
+        margin-bottom: 0;
+      }
+    }
+    .pos-1 {
+      max-width: 1003px;
+      margin: 25px auto 0;
+      @media (max-width: 767px) {
+        margin: 10px auto 0;
+      }
+    }
+  }
+}

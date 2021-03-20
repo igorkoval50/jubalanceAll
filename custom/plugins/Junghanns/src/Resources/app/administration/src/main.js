@@ -1,6 +1,9 @@
 import './module/sw-cms/blocks/text-image/image-brands';
 import './module/sw-cms/blocks/text-image/image-text-row';
+import './module/sw-cms/blocks/text-image/image-text-row-one';
 import './module/sw-cms/blocks/text-image/image-text-row-two';
+import './module/sw-cms/blocks/text-image/image-text-row-three';
+import './module/sw-cms/blocks/text-image/image-text-row-two-card';
 
 import './module/sw-cms/blocks/commerce/product-four-column';
 

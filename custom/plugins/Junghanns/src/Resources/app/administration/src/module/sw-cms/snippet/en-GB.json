@@ -10,6 +10,15 @@
                 },
                 "imageTextInside": {
                     "label": "two images and text"
+                },
+                "imageTextOne": {
+                    "label": "One column image and text"
+                },
+                "imageTextTwo": {
+                    "label": "Two column image and text"
+                },
+                "imageTextThree": {
+                    "label": "Three custom column image and text"
                 }
             },
             "text": {

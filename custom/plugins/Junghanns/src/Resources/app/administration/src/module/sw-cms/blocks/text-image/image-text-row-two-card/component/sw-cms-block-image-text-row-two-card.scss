@@ -1,0 +1,19 @@
+.sw-cms-block-image-text-row-two-card {
+    display: flex;
+    align-content: stretch;
+    align-items: start;
+
+    .sw-cms-el-text {
+        padding-top: 20px;
+    }
+
+    .sw-cms-el-image.is--cover {
+        min-height: 200px;
+    }
+    .sw-cms-block-image-text-row__left {
+        width: 33%;
+    }
+    .sw-cms-block-image-text-row__center {
+        width: 33%;
+    }
+}
