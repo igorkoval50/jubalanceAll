@@ -1,0 +1,35 @@
+{% sw_extends '@Storefront/storefront/component/product/listing.html.twig' %}
+
+{% block product_listing %}
+    <div class="cms-element-product-listing-wrapper"
+         data-listing-pagination="true"
+         data-listing-pagination-options='{{ paginationConfig }}'
+         data-listing="true"
+         data-listing-options='{{ listingPagination|json_encode }}'>
+        <h1 class="cateogry-headline">{{ page.header.navigation.active.customFields.custom_category_headline_main }}</h1>
+        <p class="category-subtitle">{{ page.header.navigation.active.customFields.custom_category_headline_subtitle }}</p>
+
+        {% block element_product_listing_wrapper_content %}
+            {{  parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+
+    {% block element_product_listing_pagination_nav_actions %}
+     <div class="cms-element-product-listing-actions row justify-content-start">
+         <div class="col-md-auto">
+             {% block element_product_listing_pagination_nav_top %}
+                 {% sw_include '@Storefront/storefront/component/pagination.html.twig' with {
+                     entities: searchResult,
+                     criteria: searchResult.criteria
+                 } %}
+             {% endblock %}
+         </div>
+
+         <div class="col-md-auto">
+             {% block element_product_listing_sorting %}
+             {% endblock %}
+         </div>
+     </div>
+ {% endblock %}
